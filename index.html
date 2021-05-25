@@ -9,23 +9,90 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-
+  <!-- GSAP ANIMATION -->
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+  integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"
+  integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q=="
+  crossorigin="anonymous"
+></script>
   <link rel="stylesheet" href="./Assets/style.css" />
   <title>Work Day Scheduler</title>
 </head>
 
 <body>
   <header class="jumbotron">
-    <h1 class="display-3">Work Day Scheduler</h1>
+    <div class="background">
+      <img class="img" src="./Assets/background.gif" alt="">
+    </div>
+    <h1 class="display-3">Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
     <p id="currentTime" class="lead"></p>
   </header>
   <div class="container">
     <!-- Timeblocks go here -->
-    <li class="list-group-item list-group-item-primary">
+    <li class="list-group-item list-group-item-dark">
       <div class="input-group mb-3">
-        <span class="time-span">9:00am</span>
+        <span class="time-span">1:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">2:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">3:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">4:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">5:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">6:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">7:00</span>
         <input type="text" class="form-control">
         <div class="input-group-append">
           <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
@@ -33,9 +100,9 @@
       </div>
     </li>
 
-    <li class="list-group-item list-group-item-primary">
+    <li class="list-group-item list-group-item-dark">
       <div class="input-group mb-3">
-        <span class="time-span">10:00am</span>
+        <span class="time-span">8:00</span>
         <input type="text" class="form-control">
         <div class="input-group-append">
           <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
@@ -43,9 +110,9 @@
       </div>
     </li>
 
-    <li class="list-group-item list-group-item-primary">
+    <li class="list-group-item list-group-item-dark">
       <div class="input-group mb-3">
-        <span class="time-span">11:00am</span>
+        <span class="time-span">9:00</span>
         <input type="text" class="form-control">
         <div class="input-group-append">
           <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
@@ -53,9 +120,9 @@
       </div>
     </li>
 
-    <li class="list-group-item list-group-item-primary">
+    <li class="list-group-item list-group-item-dark">
       <div class="input-group mb-3">
-        <span class="time-span">12:00pm</span>
+        <span class="time-span">10:00</span>
         <input type="text" class="form-control">
         <div class="input-group-append">
           <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
@@ -63,9 +130,9 @@
       </div>
     </li>
 
-    <li class="list-group-item list-group-item-primary">
+    <li class="list-group-item list-group-item-dark">
       <div class="input-group mb-3">
-        <span class="time-span">13:00pm</span>
+        <span class="time-span">11:00</span>
         <input type="text" class="form-control">
         <div class="input-group-append">
           <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
@@ -73,9 +140,9 @@
       </div>
     </li>
 
-    <li class="list-group-item list-group-item-primary">
+    <li class="list-group-item list-group-item-dark">
       <div class="input-group mb-3">
-        <span class="time-span">14:00pm</span>
+        <span class="time-span">12:00</span>
         <input type="text" class="form-control">
         <div class="input-group-append">
           <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
@@ -83,9 +150,9 @@
       </div>
     </li>
 
-    <li class="list-group-item list-group-item-primary">
+    <li class="list-group-item list-group-item-dark">
       <div class="input-group mb-3">
-        <span class="time-span">15:00pm</span>
+        <span class="time-span">13:00</span>
         <input type="text" class="form-control">
         <div class="input-group-append">
           <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
@@ -93,9 +160,9 @@
       </div>
     </li>
 
-    <li class="list-group-item list-group-item-primary">
+    <li class="list-group-item list-group-item-dark">
       <div class="input-group mb-3">
-        <span class="time-span">16:00pm</span>
+        <span class="time-span">14:00</span>
         <input type="text" class="form-control">
         <div class="input-group-append">
           <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
@@ -103,20 +170,103 @@
       </div>
     </li>
 
-    <li class="list-group-item list-group-item-primary">
+    <li class="list-group-item list-group-item-dark">
       <div class="input-group mb-3">
-        <span class="time-span">17:00pm</span>
+        <span class="time-span">15:00</span>
         <input type="text" class="form-control">
         <div class="input-group-append">
           <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
         </div>
       </div>
     </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">16:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">17:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">18:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">19:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">20:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">21:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">22:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">23:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item list-group-item-dark">
+      <div class="input-group mb-3">
+        <span class="time-span">24:00</span>
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+    </li>
+
 
     </ul>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script src="./Assets/script.js"></script>
 </body>
 

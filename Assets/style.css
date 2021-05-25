@@ -3,22 +3,41 @@ body {
   font-size: 16px;
   line-height: 1;
 }
-
+.background .img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: #ff0707;
   border-left: 1px solid black;
   padding: 10px;
 }
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
   border-radius: 0;
   border-bottom: 10px solid black;
+}
+.list-group-item {
+  background-color: bisque !important;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  width: 400px;
+  height: 80px;
+}
+.input-group {
+  padding: 20px;
 }
 
 .description {
@@ -63,7 +82,7 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #d50606;
   color: white;
 }
 
@@ -77,5 +96,5 @@ textarea {
 }
 
 .form-control {
-  color: wheat;
+  color: #92ffb6;
 }
